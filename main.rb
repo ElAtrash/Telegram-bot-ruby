@@ -3,7 +3,7 @@ require "nokogiri"
 require "open-uri"
 
 # replace ur_token with a token from botfather
-TOKEN = "818432671:AAFumlZVkn5hcJvkiGnowtomPXcQupqNSuQ"
+TOKEN = "ur_token"
 
 url = Nokogiri::HTML.parse(open("http://www.sigaretnet.by/aktsii.html"))
 url_pref = "http://www.sigaretnet.by"
