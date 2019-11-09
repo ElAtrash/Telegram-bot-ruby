@@ -8,6 +8,7 @@ TOKEN = ""
 module LiquidSales
   class Sigaretnet
     XPATH_WEEK = '//div[@class="jcomments-links"]/a[contains(@title, "Товары недели")]/@href'
+    XPATH_ITEMS_IMG_URLS = '//div[@class="item-pageakcii-p"]//p/img/@src'
 
     def initialize
       @site_name = "http://www.sigaretnet.by"
@@ -20,7 +21,7 @@ module LiquidSales
 
     def parse_week_sales
       week_sales = Nokogiri::HTML.parse(open(get_week_sale_url))
-      items_img_urls = week_sales.xpath('//div[@class="item-pageakcii-p"]//p/img/@src').map do |img_url|
+      items_img_urls = week_sales.xpath(XPATH_ITEMS_IMG_URLS).map do |img_url|
         @site_name + img_url.text
       end
       items_img_urls
