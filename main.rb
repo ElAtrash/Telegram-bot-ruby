@@ -46,7 +46,7 @@ module LiquidSales
           when "/help"
             bot.api.send_message(
               chat_id: message.chat.id,
-              text: "/week - чтобы узнать недельную акцию.\n/about_week- ссылка на страницу недельной акции.\n/help - для навигации."
+              text: "/week - чтобы узнать недельную акцию.\n/help - для навигации."
              )
           else
             bot.api.send_message(
