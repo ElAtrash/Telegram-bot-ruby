@@ -2,8 +2,8 @@ require "telegram/bot"
 require "nokogiri"
 require "open-uri"
 
-# replace ur_token with a token from botfather
-TOKEN = ""
+# replace your_token with a token from botfather
+TOKEN = "your_token"
 
 module LiquidSales
   class Sigaretnet
